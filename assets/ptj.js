@@ -177,3 +177,32 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+// Modal Functionality
+const readMoreButtons = document.querySelectorAll('.experience__button');
+const modals = document.querySelectorAll('.modal');
+const modalCloseButtons = document.querySelectorAll('.modal__close');
+
+// Open Modal
+readMoreButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modalId = button.getAttribute('data-modal-target');
+    const modal = document.querySelector(modalId);
+    modal.classList.add('active');
+  });
+});
+
+// Close Modal
+modalCloseButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    modal.classList.remove('active');
+  });
+});
+
+// Close Modal When Clicking Outside
+window.addEventListener('click', (event) => {
+  if (event.target.classList.contains('modal')) {
+    event.target.classList.remove('active');
+  }
+});
