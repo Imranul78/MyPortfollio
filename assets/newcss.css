@@ -308,6 +308,7 @@ img {
 }
 .home__description {
   margin-bottom: var(--mb-2);
+  text-align: justify;
 }
 
 .portfolio__scroll {
@@ -398,7 +399,7 @@ img {
 }
 
 .about__description {
-  text-align: center;
+  text-align: justify;
   margin-bottom: var(--mb-2-5);
 }
 
@@ -804,12 +805,14 @@ img {
 .modal__description {
   list-style-type: disc;
   padding-left: 1.5rem;
+  text-align: justify;
 }
 
 .modal__description li {
   font-size: var(--small-font-size);
   color: var(--text-color);
   margin-bottom: 0.5rem;
+  
 }
 
 /* Show Modal */
@@ -837,6 +840,7 @@ img {
 }
 .portfolio__description {
   margin-bottom: var(--mb-0-75);
+  text-align: justify;
 }
 .portfolio__button:hover .button__icon {
   transform: translateX(0.25rem);
@@ -924,6 +928,7 @@ img {
 
 .footer__container {
   row-gap: 3.5rem;
+  column-gap: 50px;
 }
 
 .footer__bg {
@@ -934,6 +939,7 @@ img {
 .footer__title {
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-0-25);
+  margin-top: -15px;
 }
 
 .footer__subtitle {
@@ -1183,7 +1189,8 @@ img {
   }
 
   .about__description {
-    text-align: initial;
+    
+    text-align: justify;
   }
   .about__info {
     justify-content: space-between;
